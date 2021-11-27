@@ -13,3 +13,17 @@ if (reversedN[reversedN.length -1] === "-") {
   return Number(reversedN) ;
   }
 }
+
+
+//https://www.codewars.com/kata/5aba780a6a176b029800041c/train/javascript
+
+function maxMultiple(divisor, bound){
+let maxMultipleList = [];
+for (i = 1; i <= bound; i ++) {
+  if (i % divisor === 0) {
+    maxMultipleList.push(i);
+  }
+}
+maxMultipleValue = maxMultipleList[maxMultipleList.length -1]
+return maxMultipleValue;
+}
