@@ -27,3 +27,20 @@ for (i = 1; i <= bound; i ++) {
 maxMultipleValue = maxMultipleList[maxMultipleList.length -1]
 return maxMultipleValue;
 }
+
+
+//https://www.codewars.com/kata/546f922b54af40e1e90001da/train/javascript
+
+function alphabetPosition(text) {
+  const textForLoop = text.toLowerCase();
+alphabetPositionList = "";
+letterPosition =""
+console.log(textForLoop)
+for (i = 0; i < textForLoop.length; i++) {
+  let letterPosition = (textForLoop.charCodeAt(i) - 96);
+  if (letterPosition > 0 ) {
+  alphabetPositionList += " " + letterPosition;
+  }
+}
+  return alphabetPositionList.slice(1, alphabetPositionList.length);
+}
