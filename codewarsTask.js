@@ -38,7 +38,7 @@ letterPosition =""
 console.log(textForLoop)
 for (i = 0; i < textForLoop.length; i++) {
   let letterPosition = (textForLoop.charCodeAt(i) - 96);
-  if (letterPosition > 0 ) {
+  if (letterPosition > 0 && letterPosition < 27 ) {
   alphabetPositionList += " " + letterPosition;
   }
 }
