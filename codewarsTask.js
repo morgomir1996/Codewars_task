@@ -44,3 +44,19 @@ for (i = 0; i < textForLoop.length; i++) {
 }
   return alphabetPositionList.slice(1, alphabetPositionList.length);
 }
+
+
+//  https://www.codewars.com/kata/find-the-smallest-integer-in-the-array/train/javascript
+
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    let minNumber = args[0];
+for (let i = 0; i < args.length; i++) {
+  let currentNumberMin = args[i];
+   if (currentNumberMin < minNumber) {
+     minNumber = currentNumberMin;
+   }
+}
+      return minNumber;
+  }
+}
