@@ -60,3 +60,39 @@ for (let i = 0; i < args.length; i++) {
       return minNumber;
   }
 }
+
+
+
+//https://www.codewars.com/kata/5dad6e5264e25a001918a1fc/train/javascript
+
+
+function decode(r) {
+let newR = "";
+let num = "";
+for(i = 0; i < r.length; i++) {
+ element = r.charCodeAt(i);
+ if (element > 47 && element < 58 ) {
+ num += r[i]; 
+ }
+   if (element >= 97 && element < 123) {
+ newR += r[i];
+ }
+}
+
+
+let toS ="";
+for (i = 0; i < newR.length; i++) {
+  if (newR[i] === "a") { 
+    toS += "a"
+  }  else {
+  for (j = 26; j >= 1; j--) {
+     if (j * Number(num) % 26 === (newR.charCodeAt(i)-97)) {
+    toS +=String.fromCharCode(j + 97);
+     }
+  }
+  }
+ }
+ if (toS.length === newR.length ) {
+   return toS;
+}  else { return"Impossible to decode";}
+}
