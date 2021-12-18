@@ -132,3 +132,17 @@ if (toS.length === newR.length && num > 0 ) {
 }  
 else { return "Impossible to decode"}
 }
+
+
+
+//   https://www.codewars.com/kata/57f7796697d62fc93d0001b8/train/javascript
+
+function trouble(x, t){
+for (i = 0; i < x.length;) {
+  console.log(x[i]);
+  if ((x[i] + (x[i + 1])) === t ) {
+   x.splice((i +1),1);
+  } else { i++}
+}
+  return x;
+}
