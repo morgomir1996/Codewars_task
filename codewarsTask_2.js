@@ -5,12 +5,12 @@ let newStr = str.split(' ')
 let pigIt = "";
 for (i = 0; i < newStr.length; i++) {
     let currentWord = newStr[i];
-    if (currentWord.length > 1) {
+    if (currentWord != "," && currentWord != "." &&currentWord != "!") {
         if (i != 0) {
           pigIt += " " + currentWord.slice(1, (currentWord.length)) + currentWord[0] + "ay";
           } 
           else { pigIt += currentWord.slice(1, (currentWord.length)) + currentWord[0] + "ay"; } 
-    } else {pigIt += currentWord}
+    } else {pigIt += " " + currentWord}
 }
 return pigIt; 
 }
