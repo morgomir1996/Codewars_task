@@ -5,7 +5,7 @@ let newStr = str.split(' ')
 let pigIt = "";
 for (i = 0; i < newStr.length; i++) {
     let currentWord = newStr[i];
-    if (currentWord != "," && currentWord != "." &&currentWord != "!") {
+    if (currentWord != "," && currentWord != "." && currentWord != "!" && currentWord != "?") {
         if (i != 0) {
           pigIt += " " + currentWord.slice(1, (currentWord.length)) + currentWord[0] + "ay";
           } 
