@@ -29,3 +29,29 @@ for (i = 0; i < words.length; i++) {
 }
   return checkedWords;
 }
+
+
+
+//https://www.codewars.com/kata/554ca54ffa7d91b236000023/train/javascript
+
+
+function deleteNth(arr, n) {
+    const uniqueArr = [...new Set(arr)];
+    let newArr = [];
+    for (i = 0; i < uniqueArr.length; i++) {
+        let currentElement = uniqueArr[i];
+        let filteredArr = arr.filter(function checkNubmer(currentValue) {
+            return currentValue === currentElement;
+        });
+        let counter = filteredArr.length;
+        if (counter > n) {
+            counter = n;
+        } else {
+            counter === filteredArr.length
+        }
+        for (k = 0; k < counter; k++) {
+            newArr.push(currentElement);
+        }
+    }
+    return newArr;
+}
