@@ -36,22 +36,20 @@ for (i = 0; i < words.length; i++) {
 
 
 function deleteNth(arr, n) {
-    const uniqueArr = [...new Set(arr)];
-    let newArr = [];
-    for (i = 0; i < uniqueArr.length; i++) {
-        let currentElement = uniqueArr[i];
-        let filteredArr = arr.filter(function checkNubmer(currentValue) {
-            return currentValue === currentElement;
-        });
-        let counter = filteredArr.length;
-        if (counter > n) {
-            counter = n;
-        } else {
-            counter === filteredArr.length
-        }
-        for (k = 0; k < counter; k++) {
-            newArr.push(currentElement);
-        }
-    }
-    return newArr;
+let newArr = [];
+let counter = 0;
+ for (i = 0; i < arr.length; i++) {
+   let currentElement = arr[i];
+   for (j = 0; j < newArr.length; j++) {
+     let newArrElement = newArr[j];
+     if(currentElement === newArrElement) {
+       counter++;
+     }
+   }
+   if (counter < n) {
+   newArr.push(currentElement);
+   }
+   counter = 0;
+ }
+  return newArr;
 }
