@@ -53,3 +53,25 @@ let counter = 0;
  }
   return newArr;
 }
+
+
+//    https://www.codewars.com/kata/54e2213f13d73eb9de0006d2/train/javascript
+
+
+function pairZeros(arr) {
+let newArr = [];
+let counter = 0;
+for (i = 0; i < arr.length; i++) {
+  if(arr[i] === 0) {
+    if( counter < 1){
+    newArr.push(arr[i]);
+    counter++;
+    }
+    else { 
+      counter = 0;
+    }
+  } else { newArr.push(arr[i]);
+  } 
+}
+return newArr;
+}
