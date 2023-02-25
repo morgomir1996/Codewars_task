@@ -56,3 +56,20 @@ function removeConsecutiveDuplicates(s) {
   }
   return clearArr.join(" ");
 }
+
+
+
+//   https://www.codewars.com/kata/59cfc09a86a6fdf6df0000f1/train/javascript
+
+
+function capitalize(s, arr) {
+  let sSplit = s.split("");
+  for (let i = 0; i < arr.length; i++) {
+    let index = arr[i];
+    if (index < sSplit.length) {
+      let letter = sSplit[index].toUpperCase();
+      sSplit.splice(index, 1, letter);
+    }
+  }
+  return sSplit.join("");
+}
