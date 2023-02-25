@@ -26,3 +26,33 @@ function last(x) {
 
   return revWordsInText(sortRevX);
 }
+
+
+
+//   https://www.codewars.com/kata/581c6b075cfa83852700021f/train/javascript
+
+
+function indexOf(head, value) {
+  let index=0
+  while(head) {
+    if (head.data===value){return index}
+    head = head.next;
+    index++
+  }
+  return -1;
+}
+
+
+
+//  https://www.codewars.com/kata/5b39e91ee7a2c103300018b3/train/javascript
+
+function removeConsecutiveDuplicates(s) {
+  const arr = s.split(" ");
+  const clearArr = [];
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] !== arr[i - 1]) {
+      clearArr.push(arr[i]);
+    }
+  }
+  return clearArr.join(" ");
+}
