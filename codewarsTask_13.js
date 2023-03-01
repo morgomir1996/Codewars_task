@@ -20,3 +20,18 @@ function missingWord(nums, str) {
     return "No mission today";
   }
 }
+
+
+
+//    https://www.codewars.com/kata/52fba66badcd10859f00097e/train/javascript
+
+function disemvowel(str) {
+  const vowels = ["e", "u", "i", "o", "a", "E", "U", "I", "O", "A"];
+
+  function check(letter) {
+    const answer = vowels.some((x) => x === letter);
+    return answer;
+  }
+
+  return str.split("").filter((x) => check(x) === false).join("");
+}
