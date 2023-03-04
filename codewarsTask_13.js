@@ -35,3 +35,24 @@ function disemvowel(str) {
 
   return str.split("").filter((x) => check(x) === false).join("");
 }
+
+
+//   https://www.codewars.com/kata/59e9f404fc3c49ab24000112/train/javascript
+
+
+function nerdify(txt) {
+  function repl(letter) {
+    if (letter === "a" || letter === "A") {
+      return 4;
+    }
+    if (letter === "e" || letter === "E") {
+      return 3;
+    }
+    if (letter === "l") {
+      return 1;
+    }
+    return letter;
+  }
+
+  return txt.split("").map((x) => (x = repl(x))).join("");
+}
